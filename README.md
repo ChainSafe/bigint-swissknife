@@ -1,4 +1,4 @@
-# <img src="https://raw.githubusercontent.com/vekexasia/bigint-swissknife/main/.github/swissknife.svg" height="40"/> bigint-swissknife
+# <img src="https://raw.githubusercontent.com/ChainSafe/bigint-swissknife/main/.github/swissknife.svg" height="40"/> bigint-swissknife
 
 **The missing BigInt toolkit for JavaScript/TypeScript** — Fast buffer conversions, math utilities, bounded integers, and more.
 
@@ -29,7 +29,7 @@ This monorepo fills those gaps with **fast, type-safe, browser-compatible** pack
 
 `bigint-buffer2` provides native Rust bindings that outperform pure JavaScript implementations:
 
-![Performance Comparison](https://raw.githubusercontent.com/vekexasia/bigint-swissknife/main/packages/bigint-buffer2/docs/benchmark-operations-BE.png)
+![Performance Comparison](https://raw.githubusercontent.com/ChainSafe/bigint-swissknife/main/packages/bigint-buffer2/docs/benchmark-operations-BE.png)
 
 *The red bars (`toBufferBEInto`) show 30-40% speedup by writing directly into pre-allocated buffers.*
 
@@ -70,7 +70,7 @@ All packages work in browsers. `bigint-buffer2` automatically falls back to a pu
 
 ## Documentation
 
-Full API documentation: **[vekexasia.github.io/bigint-swissknife](https://vekexasia.github.io/bigint-swissknife/)**
+Full API documentation: **[chainsafe.github.io/bigint-swissknife](https://chainsafe.github.io/bigint-swissknife/)**
 
 ## License
 

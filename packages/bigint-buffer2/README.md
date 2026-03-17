@@ -6,7 +6,7 @@ src="https://img.shields.io/badge/eslint-3A33D1?style=for-the-badge&logo=eslint&
 src="https://img.shields.io/badge/vitest-6E9F18?style=for-the-badge&logo=vitest&logoColor=white"/> <img
 src="https://img.shields.io/badge/Rust-000000?style=for-the-badge&logo=rust&logoColor=white"/>
 
-This project is part of the [bigint-swissknife](https://github.com/vekexasia/bigint-swissknife) project. It provides fast BigInt/Buffer conversion with Rust native bindings and a pure JS fallback for browsers.
+This project is part of the [bigint-swissknife](https://github.com/ChainSafe/bigint-swissknife) project. It provides fast BigInt/Buffer conversion with Rust native bindings and a pure JS fallback for browsers.
 
 ## Why?
 
@@ -22,7 +22,7 @@ This library addresses those limitations by providing:
 
 ## Documentation
 
-You can find typedoc documentation [here](https://vekexasia.github.io/bigint-swissknife/modules/_vekexasia_bigint-buffer2.html).
+You can find typedoc documentation [here](https://chainsafe.github.io/bigint-swissknife/modules/_chainsafe_bigint-buffer2.html).
 
 ## Installation
 

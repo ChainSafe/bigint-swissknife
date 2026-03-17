@@ -5,7 +5,7 @@ src="https://img.shields.io/badge/rollup-323330?style=for-the-badge&logo=rollup.
 src="https://img.shields.io/badge/eslint-3A33D1?style=for-the-badge&logo=eslint&logoColor=white"/> <img 
 src="https://img.shields.io/badge/vitest-6E9F18?style=for-the-badge&logo=vitest&logoColor=white"/>
 
-This project is part of the [bigint-swissknife](https://github.com/vekexasia/bigint-swissknife) project. It aims to provide some missing utilities in the `Math` native class.
+This project is part of the [bigint-swissknife](https://github.com/ChainSafe/bigint-swissknife) project. It aims to provide some missing utilities in the `Math` native class.
 
 For example there is no `Math.max` for BigInt, this library provides a solution for that and other missing utilities.
 
@@ -22,7 +22,7 @@ export type BigIntable = bigint | number | string
 
 ## Documentation
 
-You can find typedoc documentation [here](https://vekexasia.github.io/bigint-swissknife/variables/_vekexasia_bigint-math.BigIntMath.html).
+You can find typedoc documentation [here](https://chainsafe.github.io/bigint-swissknife/variables/_chainsafe_bigint-math.BigIntMath.html).
 
 ## Installation
 
@@ -40,7 +40,7 @@ yarn add @chainsafe/bigint-math
 
 ## Usage
 
-You can find all the available methods in the [typedoc documentation](https://vekexasia.github.io/bigint-swissknife/variables/_vekexasia_bigint-math.BigIntMath.html). But here a list of some of the most missing ones:
+You can find all the available methods in the [typedoc documentation](https://chainsafe.github.io/bigint-swissknife/variables/_chainsafe_bigint-math.BigIntMath.html). But here a list of some of the most missing ones:
 
 ```typescript
 

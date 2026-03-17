@@ -1,0 +1,157 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - "v*"
+  workflow_dispatch:
+    inputs:
+      dry-run:
+        description: "Dry run (skip actual publish)"
+        type: boolean
+        default: false
+
+permissions:
+  id-token: write   # Required for npm provenance (OIDC)
+  contents: write   # Required to create GitHub releases
+
+jobs:
+  build-native:
+    name: Build Native - ${{ matrix.target }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: true
+      matrix:
+        include:
+          - target: x86_64-unknown-linux-gnu
+            os: ubuntu-latest
+          - target: aarch64-unknown-linux-gnu
+            os: ubuntu-latest
+          - target: x86_64-apple-darwin
+            os: macos-latest
+          - target: aarch64-apple-darwin
+            os: macos-latest
+          - target: x86_64-pc-windows-msvc
+            os: windows-latest
+    defaults:
+      run:
+        working-directory: packages/bigint-buffer2
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          targets: ${{ matrix.target }}
+
+      - name: Install build dependencies (Ubuntu)
+        if: matrix.os == 'ubuntu-latest'
+        run: sudo apt-get update && sudo apt-get install -y build-essential
+
+      - name: Install cross-compilation tools (Linux ARM64)
+        if: matrix.target == 'aarch64-unknown-linux-gnu'
+        run: sudo apt-get install -y gcc-aarch64-linux-gnu g++-aarch64-linux-gnu
+
+      - name: Setup Yarn
+        run: |
+          corepack enable
+          yarn set version 4.1.0
+        working-directory: .
+
+      - name: Install dependencies
+        run: yarn install
+        working-directory: .
+
+      - name: Build native module
+        run: yarn build:native --target ${{ matrix.target }}
+        env:
+          CARGO_TARGET_AARCH64_UNKNOWN_LINUX_GNU_LINKER: aarch64-linux-gnu-gcc
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: bindings-${{ matrix.target }}
+          path: packages/bigint-buffer2/*.node
+          if-no-files-found: error
+
+  publish:
+    name: Publish to npm
+    runs-on: ubuntu-latest
+    needs: build-native
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          registry-url: "https://registry.npmjs.org"
+
+      - name: Setup Yarn
+        run: |
+          corepack enable
+          yarn set version 4.1.0
+
+      - name: Install dependencies
+        run: yarn install
+
+      - name: Download native binaries
+        uses: actions/download-artifact@v4
+        with:
+          path: packages/bigint-buffer2/artifacts
+
+      - name: Place native binaries
+        working-directory: packages/bigint-buffer2
+        run: |
+          find artifacts -name "*.node" -exec mv {} . \;
+          rm -rf artifacts
+          echo "Native binaries:"
+          ls -la *.node
+
+      - name: Build
+        run: yarn build
+
+      - name: Verify native binaries
+        working-directory: packages/bigint-buffer2
+        run: |
+          expected=(
+            "index.darwin-arm64.node"
+            "index.darwin-x64.node"
+            "index.linux-arm64-gnu.node"
+            "index.linux-x64-gnu.node"
+            "index.win32-x64-msvc.node"
+          )
+          for bin in "${expected[@]}"; do
+            if [ ! -f "$bin" ]; then
+              echo "ERROR: Missing native binary: $bin"
+              exit 1
+            fi
+          done
+          echo "All native binaries present"
+
+      - name: Publish packages
+        if: ${{ !inputs.dry-run }}
+        run: |
+          packages=("bigint-uint8array" "bigint-constrained" "bigint-math" "bigint-buffer2" "bigint-buffer-polyfill")
+          for pkg in "${packages[@]}"; do
+            echo "Publishing @vekexasia/$pkg..."
+            cd "packages/$pkg"
+            npm publish --access public --provenance
+            cd ../..
+          done
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: Publish packages (dry run)
+        if: ${{ inputs.dry-run }}
+        run: |
+          packages=("bigint-uint8array" "bigint-constrained" "bigint-math" "bigint-buffer2" "bigint-buffer-polyfill")
+          for pkg in "${packages[@]}"; do
+            echo "[DRY RUN] Would publish @vekexasia/$pkg"
+            cd "packages/$pkg"
+            npm publish --access public --provenance --dry-run
+            cd ../..
+          done
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

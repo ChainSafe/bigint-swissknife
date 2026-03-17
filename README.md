@@ -19,11 +19,11 @@ This monorepo fills those gaps with **fast, type-safe, browser-compatible** pack
 
 | Package | Version | Description | Highlights |
 |---------|---------|-------------|------------|
-| **[@chainsafe/bigint-buffer2](https://www.npmjs.com/package/@chainsafe/bigint-buffer2)** | [![npm](https://img.shields.io/npm/v/@vekexasia/bigint-buffer2.svg)](https://www.npmjs.com/package/@chainsafe/bigint-buffer2) | BigInt ↔ Buffer conversion | 🦀 Rust native bindings, ~30% faster than alternatives |
-| **[@chainsafe/bigint-uint8array](https://www.npmjs.com/package/@chainsafe/bigint-uint8array)** | [![npm](https://img.shields.io/npm/v/@vekexasia/bigint-uint8array.svg)](https://www.npmjs.com/package/@chainsafe/bigint-uint8array) | BigInt ↔ Uint8Array with bounds checking | Signed/unsigned, big/little endian |
-| **[@chainsafe/bigint-constrained](https://www.npmjs.com/package/@chainsafe/bigint-constrained)** | [![npm](https://img.shields.io/npm/v/@vekexasia/bigint-constrained.svg)](https://www.npmjs.com/package/@chainsafe/bigint-constrained) | Bounded BigInts (u8, i32, u256, etc.) | Overflow protection on all operations |
-| **[@chainsafe/bigint-math](https://www.npmjs.com/package/@chainsafe/bigint-math)** | [![npm](https://img.shields.io/npm/v/@vekexasia/bigint-math.svg)](https://www.npmjs.com/package/@chainsafe/bigint-math) | Math utilities for BigInt | abs, sign, max, min, rand, bitLength |
-| **[@chainsafe/bigint-buffer-polyfill](https://www.npmjs.com/package/@chainsafe/bigint-buffer-polyfill)** | [![npm](https://img.shields.io/npm/v/@vekexasia/bigint-buffer-polyfill.svg)](https://www.npmjs.com/package/@chainsafe/bigint-buffer-polyfill) | Buffer prototype extensions | `buf.writeBigIntBE()`, `buf.readBigUIntLE()` |
+| **[@chainsafe/bigint-buffer2](https://www.npmjs.com/package/@chainsafe/bigint-buffer2)** | [![npm](https://img.shields.io/npm/v/@chainsafe/bigint-buffer2.svg)](https://www.npmjs.com/package/@chainsafe/bigint-buffer2) | BigInt ↔ Buffer conversion | 🦀 Rust native bindings, ~30% faster than alternatives |
+| **[@chainsafe/bigint-uint8array](https://www.npmjs.com/package/@chainsafe/bigint-uint8array)** | [![npm](https://img.shields.io/npm/v/@chainsafe/bigint-uint8array.svg)](https://www.npmjs.com/package/@chainsafe/bigint-uint8array) | BigInt ↔ Uint8Array with bounds checking | Signed/unsigned, big/little endian |
+| **[@chainsafe/bigint-constrained](https://www.npmjs.com/package/@chainsafe/bigint-constrained)** | [![npm](https://img.shields.io/npm/v/@chainsafe/bigint-constrained.svg)](https://www.npmjs.com/package/@chainsafe/bigint-constrained) | Bounded BigInts (u8, i32, u256, etc.) | Overflow protection on all operations |
+| **[@chainsafe/bigint-math](https://www.npmjs.com/package/@chainsafe/bigint-math)** | [![npm](https://img.shields.io/npm/v/@chainsafe/bigint-math.svg)](https://www.npmjs.com/package/@chainsafe/bigint-math) | Math utilities for BigInt | abs, sign, max, min, rand, bitLength |
+| **[@chainsafe/bigint-buffer-polyfill](https://www.npmjs.com/package/@chainsafe/bigint-buffer-polyfill)** | [![npm](https://img.shields.io/npm/v/@chainsafe/bigint-buffer-polyfill.svg)](https://www.npmjs.com/package/@chainsafe/bigint-buffer-polyfill) | Buffer prototype extensions | `buf.writeBigIntBE()`, `buf.readBigUIntLE()` |
 
 ## Performance
 

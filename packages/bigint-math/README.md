@@ -22,7 +22,7 @@ export type BigIntable = bigint | number | string
 
 ## Documentation
 
-You can find typedoc documentation [here](https://chainsafe.github.io/bigint-swissknife/variables/_chainsafe_bigint-math.BigIntMath.html).
+You can find typedoc documentation [here](https://vekexasia.github.io/bigint-swissknife/variables/_vekexasia_bigint-math.BigIntMath.html).
 
 ## Installation
 
@@ -40,7 +40,7 @@ yarn add @chainsafe/bigint-math
 
 ## Usage
 
-You can find all the available methods in the [typedoc documentation](https://chainsafe.github.io/bigint-swissknife/variables/_chainsafe_bigint-math.BigIntMath.html). But here a list of some of the most missing ones:
+You can find all the available methods in the [typedoc documentation](https://vekexasia.github.io/bigint-swissknife/variables/_vekexasia_bigint-math.BigIntMath.html). But here a list of some of the most missing ones:
 
 ```typescript
 

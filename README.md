@@ -1,4 +1,4 @@
-# <img src="https://raw.githubusercontent.com/ChainSafe/bigint-swissknife/main/.github/swissknife.svg" height="40"/> bigint-swissknife
+# <img src="https://raw.githubusercontent.com/vekexasia/bigint-swissknife/main/.github/swissknife.svg" height="40"/> bigint-swissknife
 
 **The missing BigInt toolkit for JavaScript/TypeScript** — Fast buffer conversions, math utilities, bounded integers, and more.
 
@@ -19,17 +19,17 @@ This monorepo fills those gaps with **fast, type-safe, browser-compatible** pack
 
 | Package | Version | Description | Highlights |
 |---------|---------|-------------|------------|
-| **[@chainsafe/bigint-buffer2](https://www.npmjs.com/package/@chainsafe/bigint-buffer2)** | [![npm](https://img.shields.io/npm/v/@chainsafe/bigint-buffer2.svg)](https://www.npmjs.com/package/@chainsafe/bigint-buffer2) | BigInt ↔ Buffer conversion | 🦀 Rust native bindings, ~30% faster than alternatives |
-| **[@chainsafe/bigint-uint8array](https://www.npmjs.com/package/@chainsafe/bigint-uint8array)** | [![npm](https://img.shields.io/npm/v/@chainsafe/bigint-uint8array.svg)](https://www.npmjs.com/package/@chainsafe/bigint-uint8array) | BigInt ↔ Uint8Array with bounds checking | Signed/unsigned, big/little endian |
-| **[@chainsafe/bigint-constrained](https://www.npmjs.com/package/@chainsafe/bigint-constrained)** | [![npm](https://img.shields.io/npm/v/@chainsafe/bigint-constrained.svg)](https://www.npmjs.com/package/@chainsafe/bigint-constrained) | Bounded BigInts (u8, i32, u256, etc.) | Overflow protection on all operations |
-| **[@chainsafe/bigint-math](https://www.npmjs.com/package/@chainsafe/bigint-math)** | [![npm](https://img.shields.io/npm/v/@chainsafe/bigint-math.svg)](https://www.npmjs.com/package/@chainsafe/bigint-math) | Math utilities for BigInt | abs, sign, max, min, rand, bitLength |
-| **[@chainsafe/bigint-buffer-polyfill](https://www.npmjs.com/package/@chainsafe/bigint-buffer-polyfill)** | [![npm](https://img.shields.io/npm/v/@chainsafe/bigint-buffer-polyfill.svg)](https://www.npmjs.com/package/@chainsafe/bigint-buffer-polyfill) | Buffer prototype extensions | `buf.writeBigIntBE()`, `buf.readBigUIntLE()` |
+| **[@chainsafe/bigint-buffer2](https://www.npmjs.com/package/@chainsafe/bigint-buffer2)** | [![npm](https://img.shields.io/npm/v/@vekexasia/bigint-buffer2.svg)](https://www.npmjs.com/package/@chainsafe/bigint-buffer2) | BigInt ↔ Buffer conversion | 🦀 Rust native bindings, ~30% faster than alternatives |
+| **[@chainsafe/bigint-uint8array](https://www.npmjs.com/package/@chainsafe/bigint-uint8array)** | [![npm](https://img.shields.io/npm/v/@vekexasia/bigint-uint8array.svg)](https://www.npmjs.com/package/@chainsafe/bigint-uint8array) | BigInt ↔ Uint8Array with bounds checking | Signed/unsigned, big/little endian |
+| **[@chainsafe/bigint-constrained](https://www.npmjs.com/package/@chainsafe/bigint-constrained)** | [![npm](https://img.shields.io/npm/v/@vekexasia/bigint-constrained.svg)](https://www.npmjs.com/package/@chainsafe/bigint-constrained) | Bounded BigInts (u8, i32, u256, etc.) | Overflow protection on all operations |
+| **[@chainsafe/bigint-math](https://www.npmjs.com/package/@chainsafe/bigint-math)** | [![npm](https://img.shields.io/npm/v/@vekexasia/bigint-math.svg)](https://www.npmjs.com/package/@chainsafe/bigint-math) | Math utilities for BigInt | abs, sign, max, min, rand, bitLength |
+| **[@chainsafe/bigint-buffer-polyfill](https://www.npmjs.com/package/@chainsafe/bigint-buffer-polyfill)** | [![npm](https://img.shields.io/npm/v/@vekexasia/bigint-buffer-polyfill.svg)](https://www.npmjs.com/package/@chainsafe/bigint-buffer-polyfill) | Buffer prototype extensions | `buf.writeBigIntBE()`, `buf.readBigUIntLE()` |
 
 ## Performance
 
 `bigint-buffer2` provides native Rust bindings that outperform pure JavaScript implementations:
 
-![Performance Comparison](https://raw.githubusercontent.com/ChainSafe/bigint-swissknife/main/packages/bigint-buffer2/docs/benchmark-operations-BE.png)
+![Performance Comparison](https://raw.githubusercontent.com/vekexasia/bigint-swissknife/main/packages/bigint-buffer2/docs/benchmark-operations-BE.png)
 
 *The red bars (`toBufferBEInto`) show 30-40% speedup by writing directly into pre-allocated buffers.*
 
@@ -70,7 +70,7 @@ All packages work in browsers. `bigint-buffer2` automatically falls back to a pu
 
 ## Documentation
 
-Full API documentation: **[chainsafe.github.io/bigint-swissknife](https://chainsafe.github.io/bigint-swissknife/)**
+Full API documentation: **[vekexasia.github.io/bigint-swissknife](https://vekexasia.github.io/bigint-swissknife/)**
 
 ## License
 

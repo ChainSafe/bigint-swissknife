@@ -1,4 +1,4 @@
-# @vekexasia/bigint-constrained: BigInt wrapper for boundaries checking
+# @chainsafe/bigint-constrained: BigInt wrapper for boundaries checking
 
 <img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white"/> <img 
 src="https://img.shields.io/badge/rollup-323330?style=for-the-badge&logo=rollup.js&logoColor=Brown"/> <img 
@@ -14,7 +14,7 @@ Sometimes you need to work with a bounded BigInt. This library provides a simple
 For example, if you need to make sure the bigint you work with is at max 255 (aka uint8), you can use the following:
 
 ```typescript
-import { u8 } from '@vekexasia/bigint-constrained';
+import { u8 } from '@chainsafe/bigint-constrained';
 
 const a = u8(255n);
 const b = u8(256n); // throws an error
@@ -38,13 +38,13 @@ You can find typedoc documentation [here](https://vekexasia.github.io/bigint-swi
 Add the library to your project:
 
 ```bash
-npm install @vekexasia/bigint-constrained
+npm install @chainsafe/bigint-constrained
 ```
 
 or
 
 ```bash
-yarn add @vekexasia/bigint-constrained
+yarn add @chainsafe/bigint-constrained
 ```
 
 ## Usage
@@ -66,7 +66,7 @@ Right now the library exposes the following bounded BigInts:
 If these are not sufficient you can always create your own like so: 
 
 ```typescript
-import {CheckedBigInt} from '@vekexasia/bigint-constrained';
+import {CheckedBigInt} from '@chainsafe/bigint-constrained';
 
 const u1024 = new CheckedBigInt(0n /*value*/, 1024 /*bits*/, false /*unsigned*/);
 ```
@@ -74,7 +74,7 @@ const u1024 = new CheckedBigInt(0n /*value*/, 1024 /*bits*/, false /*unsigned*/)
 or custom bounds:
 
 ```typescript
-import {CheckedBigInt} from '@vekexasia/bigint-constrained';
+import {CheckedBigInt} from '@chainsafe/bigint-constrained';
 
 const between10And20 = new CheckedBigInt(10n, {min: 10n, max: 20n});
 

@@ -135,7 +135,7 @@ jobs:
         run: |
           packages=("bigint-uint8array" "bigint-constrained" "bigint-math" "bigint-buffer2" "bigint-buffer-polyfill")
           for pkg in "${packages[@]}"; do
-            echo "Publishing @vekexasia/$pkg..."
+            echo "Publishing @chainsafe/$pkg..."
             cd "packages/$pkg"
             npm publish --access public --provenance
             cd ../..
@@ -148,7 +148,7 @@ jobs:
         run: |
           packages=("bigint-uint8array" "bigint-constrained" "bigint-math" "bigint-buffer2" "bigint-buffer-polyfill")
           for pkg in "${packages[@]}"; do
-            echo "[DRY RUN] Would publish @vekexasia/$pkg"
+            echo "[DRY RUN] Would publish @chainsafe/$pkg"
             cd "packages/$pkg"
             npm publish --access public --provenance --dry-run
             cd ../..

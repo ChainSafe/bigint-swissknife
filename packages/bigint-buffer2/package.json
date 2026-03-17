@@ -1,5 +1,5 @@
 {
-  "name": "@vekexasia/bigint-buffer2",
+  "name": "@chainsafe/bigint-buffer2",
   "version": "1.1.0",
   "description": "Fast BigInt/Buffer conversion with Rust native bindings and JS fallback",
   "files": [
@@ -76,10 +76,10 @@
     "napi"
   ],
   "peerDependencies": {
-    "@vekexasia/bigint-uint8array": "*"
+    "@chainsafe/bigint-uint8array": "*"
   },
   "peerDependenciesMeta": {
-    "@vekexasia/bigint-uint8array": {
+    "@chainsafe/bigint-uint8array": {
       "optional": true
     }
   },

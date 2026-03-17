@@ -1,5 +1,5 @@
 /**
- * \@vekexasia/bigint-buffer2
+ * \@chainsafe/bigint-buffer2
  *
  * Fast BigInt/Buffer conversion with Rust native bindings and JS fallback.
  *
@@ -68,7 +68,7 @@ export async function initNative(): Promise<void> {
  *
  * @example
  * ```typescript
- * import { getImplementation } from '@vekexasia/bigint-buffer2';
+ * import { getImplementation } from '@chainsafe/bigint-buffer2';
  *
  * console.log(getImplementation()); // 'native' or 'js'
  * ```

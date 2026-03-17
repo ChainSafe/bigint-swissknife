@@ -1,5 +1,5 @@
 {
-  "name": "@vekexasia/bigint-buffer-polyfill",
+  "name": "@chainsafe/bigint-buffer-polyfill",
   "version": "1.0.1",
   "description": "Node.js Buffer prototype extensions for BigInt read/write operations",
   "main": "./dist/node.cjs.js",
@@ -45,6 +45,6 @@
   },
   "license": "MIT",
   "peerDependencies": {
-    "@vekexasia/bigint-uint8array": "*"
+    "@chainsafe/bigint-uint8array": "*"
   }
 }

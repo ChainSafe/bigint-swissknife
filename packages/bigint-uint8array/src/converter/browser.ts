@@ -1,5 +1,5 @@
 import { type UncheckedConverter } from './type'
-import { fallback } from '@vekexasia/bigint-buffer2/fallback'
+import { fallback } from '@chainsafe/bigint-buffer2/fallback'
 
 export const uncheckedConverter: UncheckedConverter = {
   arrayToBigEndian: fallback.toBigIntBE,

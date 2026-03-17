@@ -1,4 +1,4 @@
-# @vekexasia/bigint-uint8array: Enhanced Buffer/Uint8Array Conversion for BigInt
+# @chainsafe/bigint-uint8array: Enhanced Buffer/Uint8Array Conversion for BigInt
 <img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white"/> <img 
 src="https://img.shields.io/badge/rollup-323330?style=for-the-badge&logo=rollup.js&logoColor=Brown"/> <img 
 src="https://img.shields.io/badge/eslint-3A33D1?style=for-the-badge&logo=eslint&logoColor=white"/> <img 
@@ -31,13 +31,13 @@ For those who are not in need for extreme performance it is recommended to not i
 Add the library to your project:
 
 ```bash
-npm install @vekexasia/bigint-uint8array
+npm install @chainsafe/bigint-uint8array
 ```
 
 or
 
 ```bash
-yarn add @vekexasia/bigint-uint8array
+yarn add @chainsafe/bigint-uint8array
 ```
 
 ## Typescript
@@ -53,7 +53,7 @@ You can find typedoc documentation [here](https://vekexasia.github.io/bigint-swi
 The extended functionality integrates seamlessly with the existing `bigint-buffer` API, providing additional methods for working with BigInts:
 
 ```typescript
-import { converter } from '@vekexasia/bigint-uint8array';
+import { converter } from '@chainsafe/bigint-uint8array';
 
 let arr = converter
   .unsigned // or .signed if working with signed integers

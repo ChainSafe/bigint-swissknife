@@ -5,10 +5,10 @@
     "strict": true,
     "baseUrl": ".",
     "paths": {
-      "@vekexasia/bigint-buffer2": ["../../src/index.ts"],
-      "@vekexasia/bigint-buffer2/native": ["../../src/native/index.ts"],
-      "@vekexasia/bigint-buffer2/fallback": ["../../src/fallback.ts"],
-      "@vekexasia/bigint-buffer2/js": ["../../src/fallback.ts"]
+      "@chainsafe/bigint-buffer2": ["../../src/index.ts"],
+      "@chainsafe/bigint-buffer2/native": ["../../src/native/index.ts"],
+      "@chainsafe/bigint-buffer2/fallback": ["../../src/fallback.ts"],
+      "@chainsafe/bigint-buffer2/js": ["../../src/fallback.ts"]
     }
   },
   "include": [

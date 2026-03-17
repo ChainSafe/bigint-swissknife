@@ -1,6 +1,6 @@
 import {
   converter
-} from '@vekexasia/bigint-uint8array'
+} from '@chainsafe/bigint-uint8array'
 
 // Validation helper
 function validateBounds (bufferLength: number, width: number, offset: number): void {
@@ -67,7 +67,7 @@ declare global {
    * @example
    *
    * ```typescript
-   * import '@vekexasia/bigint-buffer-polyfill';
+   * import '@chainsafe/bigint-buffer-polyfill';
    *
    * const buf = Buffer.alloc(16);
    * buf.writeBigIntBE(-42n, 8);

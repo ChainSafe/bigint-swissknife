@@ -1,4 +1,4 @@
-# @vekexasia/bigint-math: BigInt Math utils
+# @chainsafe/bigint-math: BigInt Math utils
 
 <img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white"/> <img 
 src="https://img.shields.io/badge/rollup-323330?style=for-the-badge&logo=rollup.js&logoColor=Brown"/> <img 
@@ -29,13 +29,13 @@ You can find typedoc documentation [here](https://vekexasia.github.io/bigint-swi
 Add the library to your project:
 
 ```bash
-npm install @vekexasia/bigint-math
+npm install @chainsafe/bigint-math
 ```
 
 or
 
 ```bash
-yarn add @vekexasia/bigint-math
+yarn add @chainsafe/bigint-math
 ```
 
 ## Usage
@@ -44,7 +44,7 @@ You can find all the available methods in the [typedoc documentation](https://ve
 
 ```typescript
 
-import {BigIntMath} from '@vekexasia/bigint-math';
+import {BigIntMath} from '@chainsafe/bigint-math';
 
 BigIntMath.max(1n, 2n, 3n, 4n, 5n); // 5n
 BigIntMath.min(1n, 2n, 3n, 4n, 5n); // 1n

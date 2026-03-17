@@ -6,7 +6,7 @@
     "types": ["node"],
     "lib": ["dom"],
     "paths": {
-      "@vekexasia/bigint-uint8array": ["../bigint-uint8array/dist/types/index.d.ts"],
+      "@chainsafe/bigint-uint8array": ["../bigint-uint8array/dist/types/index.d.ts"],
       "@/*": ["src/*"]
     }
   },

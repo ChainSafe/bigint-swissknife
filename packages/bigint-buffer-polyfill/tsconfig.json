@@ -8,7 +8,7 @@
     "paths": {
       "@/*": ["./src/*"],
       "@cases": ["../bigint-uint8array/test/intcases.ts"],
-      "@vekexasia/bigint-uint8array": ["../bigint-uint8array/dist/types/index.d.ts"]
+      "@chainsafe/bigint-uint8array": ["../bigint-uint8array/dist/types/index.d.ts"]
     }
   },
   "include": [

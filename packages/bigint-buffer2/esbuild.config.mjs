@@ -15,7 +15,7 @@ async function build() {
   }
   fs.mkdirSync(distDir, { recursive: true });
 
-  const external = ['@vekexasia/bigint-uint8array'];
+  const external = ['@chainsafe/bigint-uint8array'];
 
   // Browser builds - native module import is replaced with stub via preprocess plugin
   console.log('  Building dist/browser.esm.mjs...');

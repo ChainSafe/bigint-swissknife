@@ -1,5 +1,5 @@
 {
-  "name": "@vekexasia/bigint-uint8array",
+  "name": "@chainsafe/bigint-uint8array",
   "version": "1.1.2",
   "description": "Convert BigInt to/from Uint8Array with bounds checking, signed/unsigned support, and big/little endian",
   "main": "./dist/node.cjs.js",
@@ -49,14 +49,14 @@
   },
   "license": "MIT",
   "peerDependencies": {
-    "@vekexasia/bigint-buffer2": "*"
+    "@chainsafe/bigint-buffer2": "*"
   },
   "peerDependenciesMeta": {
-    "@vekexasia/bigint-buffer2": {
+    "@chainsafe/bigint-buffer2": {
       "optional": true
     }
   },
   "devDependencies": {
-    "@vekexasia/bigint-buffer2": "workspace:*"
+    "@chainsafe/bigint-buffer2": "workspace:*"
   }
 }

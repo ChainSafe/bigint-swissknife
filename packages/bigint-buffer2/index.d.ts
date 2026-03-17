@@ -18,7 +18,7 @@ export declare function toBufferLeFast(num: bigint, buffer: BufferMut): void
  *
  * # Example
  * ```javascript
- * const { toBigIntBe } = require('@vekexasia/bigint-buffer2');
+ * const { toBigIntBe } = require('@chainsafe/bigint-buffer2');
  * const buf = Buffer.from([0x01, 0x02, 0x03, 0x04]);
  * const num = toBigIntBe(buf); // 16909060n
  * ```

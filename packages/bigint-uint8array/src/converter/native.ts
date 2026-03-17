@@ -7,7 +7,7 @@ try {
   // For ESM: await import() waits for module, then we await initNative()
   // For CJS: esbuild replaces "await import(" with "require(" making it sync,
   //          initNative() is already called by bigint-buffer2 at load time
-  const module = await import('@vekexasia/bigint-buffer2');
+  const module = await import('@chainsafe/bigint-buffer2');
 
   if (module) {
     // initNative returns a promise - awaiting it ensures native is ready for ESM

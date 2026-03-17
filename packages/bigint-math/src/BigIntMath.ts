@@ -2,7 +2,7 @@ import { type BigIntable } from './types.js'
 import { fillRandom } from './fillRandom.js'
 import {
   converter
-} from '@vekexasia/bigint-uint8array'
+} from '@chainsafe/bigint-uint8array'
 
 /**
  * A collection of functions to perform mathematical operations on BigInts

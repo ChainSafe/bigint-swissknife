@@ -7,7 +7,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 async function build() {
   console.log('Building bigint-buffer-polyfill...');
 
-  const config = buildConfigs.nodeOnly(['@vekexasia/bigint-uint8array']);
+  const config = buildConfigs.nodeOnly(['@chainsafe/bigint-uint8array']);
 
   await runBuild(__dirname, config);
 

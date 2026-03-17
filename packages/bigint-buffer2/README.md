@@ -1,4 +1,4 @@
-# @vekexasia/bigint-buffer2: Fast BigInt/Buffer conversion
+# @chainsafe/bigint-buffer2: Fast BigInt/Buffer conversion
 
 <img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white"/> <img
 src="https://img.shields.io/badge/esbuild-FFCF00?style=for-the-badge&logo=esbuild&logoColor=black"/> <img
@@ -6,7 +6,7 @@ src="https://img.shields.io/badge/eslint-3A33D1?style=for-the-badge&logo=eslint&
 src="https://img.shields.io/badge/vitest-6E9F18?style=for-the-badge&logo=vitest&logoColor=white"/> <img
 src="https://img.shields.io/badge/Rust-000000?style=for-the-badge&logo=rust&logoColor=white"/>
 
-This project is part of the [bigint-swissknife](https://github.com/vekexasia/bigint-swissknife) project. It provides fast BigInt/Buffer conversion with Rust native bindings and a pure JS fallback for browsers.
+This project is part of the [bigint-swissknife](https://github.com/ChainSafe/bigint-swissknife) project. It provides fast BigInt/Buffer conversion with Rust native bindings and a pure JS fallback for browsers.
 
 ## Why?
 
@@ -29,19 +29,19 @@ You can find typedoc documentation [here](https://vekexasia.github.io/bigint-swi
 Add the library to your project:
 
 ```bash
-npm install @vekexasia/bigint-buffer2
+npm install @chainsafe/bigint-buffer2
 ```
 
 or
 
 ```bash
-yarn add @vekexasia/bigint-buffer2
+yarn add @chainsafe/bigint-buffer2
 ```
 
 ## Usage
 
 ```typescript
-import { toBigIntBE, toBigIntLE, toBufferBE, toBufferLE } from '@vekexasia/bigint-buffer2';
+import { toBigIntBE, toBigIntLE, toBufferBE, toBufferLE } from '@chainsafe/bigint-buffer2';
 
 // Buffer to BigInt
 const buffer = new Uint8Array([0x01, 0x02, 0x03, 0x04]);
@@ -56,7 +56,7 @@ const le = toBufferLE(67305985n, 4);  // Uint8Array [0x01, 0x02, 0x03, 0x04]
 ### Signed BigInt Support
 
 ```typescript
-import { toBigIntBESigned, toBigIntLESigned } from '@vekexasia/bigint-buffer2';
+import { toBigIntBESigned, toBigIntLESigned } from '@chainsafe/bigint-buffer2';
 
 const buffer = new Uint8Array([0xff, 0xff]); // -1 in 2 bytes (two's complement)
 const signed = toBigIntBESigned(buffer); // -1n
@@ -65,7 +65,7 @@ const signed = toBigIntBESigned(buffer); // -1n
 ### Implementation Detection
 
 ```typescript
-import { getImplementation } from '@vekexasia/bigint-buffer2';
+import { getImplementation } from '@chainsafe/bigint-buffer2';
 
 console.log(getImplementation()); // 'native' or 'js'
 ```
@@ -76,10 +76,10 @@ For benchmarking or specific use cases, you can import implementations directly:
 
 ```typescript
 // Force JS fallback
-import { toBigIntBE } from '@vekexasia/bigint-buffer2/js';
+import { toBigIntBE } from '@chainsafe/bigint-buffer2/js';
 
 // Force native (Node.js only)
-import { toBigIntBE } from '@vekexasia/bigint-buffer2/native';
+import { toBigIntBE } from '@chainsafe/bigint-buffer2/native';
 ```
 
 ## TypeScript

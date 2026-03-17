@@ -1,5 +1,5 @@
 {
-  "name": "@vekexasia/bigint-buffer2",
+  "name": "@chainsafe/bigint-buffer2",
   "version": "1.1.0",
   "description": "Fast BigInt/Buffer conversion with Rust native bindings and JS fallback",
   "files": [
@@ -64,7 +64,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/vekexasia/bigint-swissknife.git",
+    "url": "https://github.com/ChainSafe/bigint-swissknife.git",
     "directory": "packages/bigint-buffer2"
   },
   "keywords": [
@@ -76,10 +76,10 @@
     "napi"
   ],
   "peerDependencies": {
-    "@vekexasia/bigint-uint8array": "*"
+    "@chainsafe/bigint-uint8array": "*"
   },
   "peerDependenciesMeta": {
-    "@vekexasia/bigint-uint8array": {
+    "@chainsafe/bigint-uint8array": {
       "optional": true
     }
   },

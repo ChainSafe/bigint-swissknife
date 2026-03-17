@@ -19,7 +19,7 @@ export default defineConfig({
     },
     alias: {
       "@/": new URL('./src/', import.meta.url).pathname,
-      '@vekexasia/bigint-uint8array': new URL('../bigint-uint8array', import.meta.url).pathname,
+      '@chainsafe/bigint-uint8array': new URL('../bigint-uint8array', import.meta.url).pathname,
     }
   }
 });

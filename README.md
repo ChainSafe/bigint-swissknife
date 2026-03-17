@@ -19,11 +19,11 @@ This monorepo fills those gaps with **fast, type-safe, browser-compatible** pack
 
 | Package | Version | Description | Highlights |
 |---------|---------|-------------|------------|
-| **[@vekexasia/bigint-buffer2](https://www.npmjs.com/package/@vekexasia/bigint-buffer2)** | [![npm](https://img.shields.io/npm/v/@vekexasia/bigint-buffer2.svg)](https://www.npmjs.com/package/@vekexasia/bigint-buffer2) | BigInt ↔ Buffer conversion | 🦀 Rust native bindings, ~30% faster than alternatives |
-| **[@vekexasia/bigint-uint8array](https://www.npmjs.com/package/@vekexasia/bigint-uint8array)** | [![npm](https://img.shields.io/npm/v/@vekexasia/bigint-uint8array.svg)](https://www.npmjs.com/package/@vekexasia/bigint-uint8array) | BigInt ↔ Uint8Array with bounds checking | Signed/unsigned, big/little endian |
-| **[@vekexasia/bigint-constrained](https://www.npmjs.com/package/@vekexasia/bigint-constrained)** | [![npm](https://img.shields.io/npm/v/@vekexasia/bigint-constrained.svg)](https://www.npmjs.com/package/@vekexasia/bigint-constrained) | Bounded BigInts (u8, i32, u256, etc.) | Overflow protection on all operations |
-| **[@vekexasia/bigint-math](https://www.npmjs.com/package/@vekexasia/bigint-math)** | [![npm](https://img.shields.io/npm/v/@vekexasia/bigint-math.svg)](https://www.npmjs.com/package/@vekexasia/bigint-math) | Math utilities for BigInt | abs, sign, max, min, rand, bitLength |
-| **[@vekexasia/bigint-buffer-polyfill](https://www.npmjs.com/package/@vekexasia/bigint-buffer-polyfill)** | [![npm](https://img.shields.io/npm/v/@vekexasia/bigint-buffer-polyfill.svg)](https://www.npmjs.com/package/@vekexasia/bigint-buffer-polyfill) | Buffer prototype extensions | `buf.writeBigIntBE()`, `buf.readBigUIntLE()` |
+| **[@chainsafe/bigint-buffer2](https://www.npmjs.com/package/@chainsafe/bigint-buffer2)** | [![npm](https://img.shields.io/npm/v/@chainsafe/bigint-buffer2.svg)](https://www.npmjs.com/package/@chainsafe/bigint-buffer2) | BigInt ↔ Buffer conversion | 🦀 Rust native bindings, ~30% faster than alternatives |
+| **[@chainsafe/bigint-uint8array](https://www.npmjs.com/package/@chainsafe/bigint-uint8array)** | [![npm](https://img.shields.io/npm/v/@chainsafe/bigint-uint8array.svg)](https://www.npmjs.com/package/@chainsafe/bigint-uint8array) | BigInt ↔ Uint8Array with bounds checking | Signed/unsigned, big/little endian |
+| **[@chainsafe/bigint-constrained](https://www.npmjs.com/package/@chainsafe/bigint-constrained)** | [![npm](https://img.shields.io/npm/v/@chainsafe/bigint-constrained.svg)](https://www.npmjs.com/package/@chainsafe/bigint-constrained) | Bounded BigInts (u8, i32, u256, etc.) | Overflow protection on all operations |
+| **[@chainsafe/bigint-math](https://www.npmjs.com/package/@chainsafe/bigint-math)** | [![npm](https://img.shields.io/npm/v/@chainsafe/bigint-math.svg)](https://www.npmjs.com/package/@chainsafe/bigint-math) | Math utilities for BigInt | abs, sign, max, min, rand, bitLength |
+| **[@chainsafe/bigint-buffer-polyfill](https://www.npmjs.com/package/@chainsafe/bigint-buffer-polyfill)** | [![npm](https://img.shields.io/npm/v/@chainsafe/bigint-buffer-polyfill.svg)](https://www.npmjs.com/package/@chainsafe/bigint-buffer-polyfill) | Buffer prototype extensions | `buf.writeBigIntBE()`, `buf.readBigUIntLE()` |
 
 ## Performance
 
@@ -37,29 +37,29 @@ This monorepo fills those gaps with **fast, type-safe, browser-compatible** pack
 
 ```bash
 # Core buffer conversion (recommended starting point)
-npm install @vekexasia/bigint-buffer2
+npm install @chainsafe/bigint-buffer2
 
 # Or pick what you need
-npm install @vekexasia/bigint-uint8array  # bounds-checked conversions
-npm install @vekexasia/bigint-constrained # bounded integers
-npm install @vekexasia/bigint-math        # math utilities
+npm install @chainsafe/bigint-uint8array  # bounds-checked conversions
+npm install @chainsafe/bigint-constrained # bounded integers
+npm install @chainsafe/bigint-math        # math utilities
 ```
 
 ### Examples
 
 ```typescript
 // Buffer conversion (bigint-buffer2)
-import { toBigIntBE, toBufferBE } from '@vekexasia/bigint-buffer2';
+import { toBigIntBE, toBufferBE } from '@chainsafe/bigint-buffer2';
 const num = toBigIntBE(new Uint8Array([0x01, 0x02, 0x03]));  // 66051n
 const buf = toBufferBE(12345n, 4);  // Uint8Array [0, 0, 48, 57]
 
 // Bounded integers (bigint-constrained)
-import { u8, i32 } from '@vekexasia/bigint-constrained';
+import { u8, i32 } from '@chainsafe/bigint-constrained';
 const byte = u8(255n);
 byte.add(1n);  // throws RangeError: overflow
 
 // Math utilities (bigint-math)
-import { BigIntMath } from '@vekexasia/bigint-math';
+import { BigIntMath } from '@chainsafe/bigint-math';
 BigIntMath.max(1n, 5n, 3n);        // 5n
 BigIntMath.rand(1000000000000n);   // random BigInt 0..1T
 ```

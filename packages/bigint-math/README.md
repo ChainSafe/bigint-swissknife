@@ -1,11 +1,11 @@
-# @vekexasia/bigint-math: BigInt Math utils
+# @chainsafe/bigint-math: BigInt Math utils
 
 <img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white"/> <img 
 src="https://img.shields.io/badge/rollup-323330?style=for-the-badge&logo=rollup.js&logoColor=Brown"/> <img 
 src="https://img.shields.io/badge/eslint-3A33D1?style=for-the-badge&logo=eslint&logoColor=white"/> <img 
 src="https://img.shields.io/badge/vitest-6E9F18?style=for-the-badge&logo=vitest&logoColor=white"/>
 
-This project is part of the [bigint-swissknife](https://github.com/vekexasia/bigint-swissknife) project. It aims to provide some missing utilities in the `Math` native class.
+This project is part of the [bigint-swissknife](https://github.com/ChainSafe/bigint-swissknife) project. It aims to provide some missing utilities in the `Math` native class.
 
 For example there is no `Math.max` for BigInt, this library provides a solution for that and other missing utilities.
 
@@ -29,13 +29,13 @@ You can find typedoc documentation [here](https://vekexasia.github.io/bigint-swi
 Add the library to your project:
 
 ```bash
-npm install @vekexasia/bigint-math
+npm install @chainsafe/bigint-math
 ```
 
 or
 
 ```bash
-yarn add @vekexasia/bigint-math
+yarn add @chainsafe/bigint-math
 ```
 
 ## Usage
@@ -44,7 +44,7 @@ You can find all the available methods in the [typedoc documentation](https://ve
 
 ```typescript
 
-import {BigIntMath} from '@vekexasia/bigint-math';
+import {BigIntMath} from '@chainsafe/bigint-math';
 
 BigIntMath.max(1n, 2n, 3n, 4n, 5n); // 5n
 BigIntMath.min(1n, 2n, 3n, 4n, 5n); // 1n

@@ -6,7 +6,7 @@
 import type { BigIntBuffer2Extended } from './types.js';
 
 export function getNativeSync(): BigIntBuffer2Extended {
-  throw new Error("@vekexasia/bigint-buffer2: Native bindings are not available in browser environments.");
+  throw new Error("@chainsafe/bigint-buffer2: Native bindings are not available in browser environments.");
 }
 
 export function isNativeAvailable(): boolean {

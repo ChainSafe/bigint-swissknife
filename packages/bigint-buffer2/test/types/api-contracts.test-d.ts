@@ -1,5 +1,5 @@
 /**
- * Compile-time type contract tests for \@vekexasia/bigint-buffer2 subpath API split.
+ * Compile-time type contract tests for \@chainsafe/bigint-buffer2 subpath API split.
  *
  * Run via: cd packages/bigint-buffer2 && npm run test:types
  *
@@ -16,7 +16,7 @@ import {
   toBufferLEInto as nativeToBufferLEInto,
   toBigIntBE as nativeToBigIntBE,
   toBigIntLE as nativeToBigIntLE,
-} from '@vekexasia/bigint-buffer2/native';
+} from '@chainsafe/bigint-buffer2/native';
 
 // --- Return types: native alloc methods must return Buffer, not Buffer | Uint8Array ---
 const nativeBE: Buffer = nativeToBufferBE(1n, 4);
@@ -49,7 +49,7 @@ import {
   toBufferBEInto as fbToBufferBEInto,
   toBufferLEInto as fbToBufferLEInto,
   toBigIntBE as fbToBigIntBE,
-} from '@vekexasia/bigint-buffer2/fallback';
+} from '@chainsafe/bigint-buffer2/fallback';
 
 // --- Into methods: fallback accepts both Buffer and Uint8Array ---
 fbToBufferBEInto(1n, Buffer.alloc(4));
@@ -66,7 +66,7 @@ fbToBigIntBE(new Uint8Array(4));
 import {
   toBufferBEInto as jsToBufferBEInto,
   toBufferLEInto as jsToBufferLEInto,
-} from '@vekexasia/bigint-buffer2/js';
+} from '@chainsafe/bigint-buffer2/js';
 
 jsToBufferBEInto(1n, new Uint8Array(4));
 jsToBufferLEInto(1n, new Uint8Array(4));
@@ -78,7 +78,7 @@ import {
   toBufferLEInto as mainToBufferLEInto,
   toBufferBE as mainToBufferBE,
   toBufferLE as mainToBufferLE,
-} from '@vekexasia/bigint-buffer2';
+} from '@chainsafe/bigint-buffer2';
 
 // --- Into methods: main entry accepts both (broad contract) ---
 mainToBufferBEInto(1n, Buffer.alloc(4));

@@ -11,7 +11,7 @@ assignees: ''
 A clear and concise description of what the bug is.
 
 **Package Name and version (please complete the following information):**
-- @vekexasia/bigint- x.x.x
+- @chainsafe/bigint- x.x.x
 
 **To Reproduce**
 Steps to reproduce the behavior:

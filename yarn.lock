@@ -200,6 +200,57 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@chainsafe/bigint-buffer-polyfill@workspace:packages/bigint-buffer-polyfill":
+  version: 0.0.0-use.local
+  resolution: "@chainsafe/bigint-buffer-polyfill@workspace:packages/bigint-buffer-polyfill"
+  peerDependencies:
+    "@chainsafe/bigint-uint8array": "*"
+  languageName: unknown
+  linkType: soft
+
+"@chainsafe/bigint-buffer2@workspace:*, @chainsafe/bigint-buffer2@workspace:packages/bigint-buffer2":
+  version: 0.0.0-use.local
+  resolution: "@chainsafe/bigint-buffer2@workspace:packages/bigint-buffer2"
+  dependencies:
+    "@napi-rs/cli": "npm:^2.18.0"
+    bigint-buffer: "npm:^1.1.5"
+    chart.js: "npm:^4.5.1"
+    chartjs-node-canvas: "npm:^5.0.0"
+  peerDependencies:
+    "@chainsafe/bigint-uint8array": "*"
+  peerDependenciesMeta:
+    "@chainsafe/bigint-uint8array":
+      optional: true
+  languageName: unknown
+  linkType: soft
+
+"@chainsafe/bigint-constrained@workspace:packages/bigint-constrained":
+  version: 0.0.0-use.local
+  resolution: "@chainsafe/bigint-constrained@workspace:packages/bigint-constrained"
+  languageName: unknown
+  linkType: soft
+
+"@chainsafe/bigint-math@workspace:packages/bigint-math":
+  version: 0.0.0-use.local
+  resolution: "@chainsafe/bigint-math@workspace:packages/bigint-math"
+  peerDependencies:
+    "@chainsafe/bigint-uint8array": "*"
+  languageName: unknown
+  linkType: soft
+
+"@chainsafe/bigint-uint8array@workspace:packages/bigint-uint8array":
+  version: 0.0.0-use.local
+  resolution: "@chainsafe/bigint-uint8array@workspace:packages/bigint-uint8array"
+  dependencies:
+    "@chainsafe/bigint-buffer2": "workspace:*"
+  peerDependencies:
+    "@chainsafe/bigint-buffer2": "*"
+  peerDependenciesMeta:
+    "@chainsafe/bigint-buffer2":
+      optional: true
+  languageName: unknown
+  linkType: soft
+
 "@csstools/color-helpers@npm:^5.1.0":
   version: 5.1.0
   resolution: "@csstools/color-helpers@npm:5.1.0"
@@ -1470,57 +1521,6 @@ __metadata:
   checksum: 10c0/be2062073c9fd28762f73d442e8536f16e1eab0935df463ed45bd95575b4b79b4a4ca1f45c04b1964dc424b8d25c6489253e3ea2236bb74cff9b7e02e1e7f5be
   languageName: node
   linkType: hard
-
-"@vekexasia/bigint-buffer-polyfill@workspace:packages/bigint-buffer-polyfill":
-  version: 0.0.0-use.local
-  resolution: "@vekexasia/bigint-buffer-polyfill@workspace:packages/bigint-buffer-polyfill"
-  peerDependencies:
-    "@vekexasia/bigint-uint8array": "*"
-  languageName: unknown
-  linkType: soft
-
-"@vekexasia/bigint-buffer2@workspace:*, @vekexasia/bigint-buffer2@workspace:packages/bigint-buffer2":
-  version: 0.0.0-use.local
-  resolution: "@vekexasia/bigint-buffer2@workspace:packages/bigint-buffer2"
-  dependencies:
-    "@napi-rs/cli": "npm:^2.18.0"
-    bigint-buffer: "npm:^1.1.5"
-    chart.js: "npm:^4.5.1"
-    chartjs-node-canvas: "npm:^5.0.0"
-  peerDependencies:
-    "@vekexasia/bigint-uint8array": "*"
-  peerDependenciesMeta:
-    "@vekexasia/bigint-uint8array":
-      optional: true
-  languageName: unknown
-  linkType: soft
-
-"@vekexasia/bigint-constrained@workspace:packages/bigint-constrained":
-  version: 0.0.0-use.local
-  resolution: "@vekexasia/bigint-constrained@workspace:packages/bigint-constrained"
-  languageName: unknown
-  linkType: soft
-
-"@vekexasia/bigint-math@workspace:packages/bigint-math":
-  version: 0.0.0-use.local
-  resolution: "@vekexasia/bigint-math@workspace:packages/bigint-math"
-  peerDependencies:
-    "@vekexasia/bigint-uint8array": "*"
-  languageName: unknown
-  linkType: soft
-
-"@vekexasia/bigint-uint8array@workspace:packages/bigint-uint8array":
-  version: 0.0.0-use.local
-  resolution: "@vekexasia/bigint-uint8array@workspace:packages/bigint-uint8array"
-  dependencies:
-    "@vekexasia/bigint-buffer2": "workspace:*"
-  peerDependencies:
-    "@vekexasia/bigint-buffer2": "*"
-  peerDependenciesMeta:
-    "@vekexasia/bigint-buffer2":
-      optional: true
-  languageName: unknown
-  linkType: soft
 
 "@vitest/browser@npm:^2.1.9":
   version: 2.1.9
@@ -4803,9 +4803,9 @@ __metadata:
   linkType: hard
 
 "picomatch@npm:^4.0.3":
-  version: 4.0.3
-  resolution: "picomatch@npm:4.0.3"
-  checksum: 10c0/9582c951e95eebee5434f59e426cddd228a7b97a0161a375aed4be244bd3fe8e3a31b846808ea14ef2c8a2527a6eeab7b3946a67d5979e81694654f939473ae2
+  version: 4.0.4
+  resolution: "picomatch@npm:4.0.4"
+  checksum: 10c0/e2c6023372cc7b5764719a5ffb9da0f8e781212fa7ca4bd0562db929df8e117460f00dff3cb7509dacfc06b86de924b247f504d0ce1806a37fac4633081466b0
   languageName: node
   linkType: hard
 
